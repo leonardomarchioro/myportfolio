@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         outline: 0;
-        font-family: "Poppins", sans-serif;
+        font-family: "Lexend", sans-serif;
         transition: all 0.5s ease;
     }
 
@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         border: none;
         border-radius: 4px;
+        font-family: 'Inter', sans-serif;
 
     }
 
@@ -38,5 +39,12 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lexend', sans-serif;
+        }
+
+    p, span {
+        font-family: 'Inter', sans-serif;
+    }
 
 `;
