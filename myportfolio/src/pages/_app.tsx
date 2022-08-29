@@ -1,4 +1,6 @@
 import type { AppProps } from "next/app";
+import { NextUIProvider } from "@nextui-org/react";
+
 import { GlobalStyle } from "../styles/global.styles";
 import StyledThemeProvider from "../styles/theme/themeProvider";
 
@@ -7,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <StyledThemeProvider>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <NextUIProvider>
+          <Component {...pageProps} />
+        </NextUIProvider>
       </StyledThemeProvider>
     </>
   );
