@@ -20,7 +20,7 @@ export const lightTheme: DefaultTheme = {
   },
   inputColors: {
     backgroud: "#F1F3F5",
-    placeholder: "#2D2E4D",
+    placeholder: "#000000",
   },
   buttonColors: {
     background: {
