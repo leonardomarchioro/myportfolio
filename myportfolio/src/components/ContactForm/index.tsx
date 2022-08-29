@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { GeneralInput, TextArea } from "../Inputs";
+import { sendEmail } from "../../utils/sendEmail";
 
 interface IContact {
   name?: string;
@@ -31,8 +32,9 @@ const ContactForm: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const handleEmail = (data: IContact) => {
+  const handleEmail = async (data: IContact) => {
     console.log(data);
+    await sendEmail(data);
   };
 
   return (
