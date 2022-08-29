@@ -21,22 +21,9 @@ export const STitle = styled.h2`
   color: ${({ theme }) => theme.titleColors.secondary};
 `;
 
-export const SInput = styled(Input)`
-  div {
-    background-color: ${({ theme }) => theme.inputColors.backgroud};
-  }
-`;
-
-export const STextarea = styled(Textarea)`
-  div {
-    background-color: ${({ theme }) => theme.inputColors.backgroud};
-  }
-`;
-
 export const SButton = styled(Button)`
   background-color: ${({ theme }) => theme.buttonColors.background};
   color: ${({ theme }) => theme.buttonColors.color};
-  display: flex;
   width: 5rem;
   font-weight: 600;
 `;
