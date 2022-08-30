@@ -5,13 +5,15 @@ import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Dev Leonardo</title>
       </Head>
       <Header />
-      <main>{/* <ContactForm /> */}</main>
-    </div>
+      <main>
+        <ContactForm />
+      </main>
+    </>
   );
 };
 

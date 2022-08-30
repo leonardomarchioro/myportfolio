@@ -17,6 +17,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;700&family=Lexend:wght@300;600;800&display=swap"
             rel="stylesheet"
           />
+
           {CssBaseline.flush()}
         </Head>
         <body>
