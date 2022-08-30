@@ -13,7 +13,7 @@ export const ThemeContext = React.createContext({} as Ivalues);
 const StyledThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   const handleTheme = () => {
     const newMode = mode === "light" ? "dark" : "light";

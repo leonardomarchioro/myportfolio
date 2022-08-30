@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import ContactForm from "../components/ContactForm";
+import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
@@ -8,10 +9,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Dev Leonardo</title>
       </Head>
-
-      <main>
-        <ContactForm />
-      </main>
+      <Header />
+      <main>{/* <ContactForm /> */}</main>
     </div>
   );
 };
