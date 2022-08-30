@@ -1,10 +1,13 @@
+import DesktopHeader from "./Desktop";
 import MobileHeader from "./Mobile";
+import { HeaderContainer } from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <HeaderContainer>
+      <DesktopHeader />
       <MobileHeader />
-    </header>
+    </HeaderContainer>
   );
 };
 
