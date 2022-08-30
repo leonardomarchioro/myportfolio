@@ -5,7 +5,12 @@ import GitHub from "../../../../assets/github.png";
 import Image from "next/image";
 
 import { Navbar, Switch } from "@nextui-org/react";
-import { ContainerLinks } from "./styles";
+import {
+  CollapseContent,
+  ContainerLinks,
+  NavBarRoot,
+  Navigate,
+} from "./styles";
 import { useTheme } from "../../../../styles/theme/themeProvider";
 
 import { HiSun, HiMoon } from "react-icons/hi";
@@ -22,19 +27,13 @@ const DropDown: React.FC = () => {
   };
 
   return (
-    <Navbar isBordered variant="sticky">
-      <Navbar.Toggle showIn="xs" />
+    <NavBarRoot isBordered variant="sticky">
+      <Navbar.Toggle />
       <Switch onChange={handleTheme} iconOn={<HiMoon />} iconOff={<HiSun />} />
-      <Navbar.Collapse>
-        <Navbar.CollapseItem onClick={() => scrollTo(10)}>
-          Tecnologias
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem onClick={() => scrollTo(550)}>
-          Projetos
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem onClick={() => scrollTo(10000)}>
-          Contato
-        </Navbar.CollapseItem>
+      <CollapseContent>
+        <Navigate onClick={() => scrollTo(10)}>Tecnologias</Navigate>
+        <Navigate onClick={() => scrollTo(550)}>Projetos</Navigate>
+        <Navigate onClick={() => scrollTo(10000)}>Contato</Navigate>
         <ContainerLinks>
           <div>
             <Link
@@ -58,8 +57,8 @@ const DropDown: React.FC = () => {
             </Link>
           </div>
         </ContainerLinks>
-      </Navbar.Collapse>
-    </Navbar>
+      </CollapseContent>
+    </NavBarRoot>
   );
 };
 
