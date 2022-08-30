@@ -1,5 +1,5 @@
+import { Loading } from "@nextui-org/react";
 import styled from "styled-components";
-import { Input, Textarea, Button } from "@nextui-org/react";
 
 export const SForm = styled.form`
   background-color: ${({ theme }) => theme.backgroundColors.primary};
@@ -21,15 +21,29 @@ export const STitle = styled.h2`
   color: ${({ theme }) => theme.titleColors.secondary};
 `;
 
-export const SButton = styled(Button)`
-  background-color: ${({ theme }) => theme.buttonColors.background};
-  color: ${({ theme }) => theme.buttonColors.color};
-  width: 5rem;
-  font-weight: 600;
-`;
-
 export const SContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+
+  button {
+    background-color: ${({ theme }) => theme.buttonColors.background.secondary};
+    color: ${({ theme }) => theme.buttonColors.color.secondary};
+    width: 5rem;
+    font-weight: 600;
+  }
+`;
+
+export const SLoading = styled(Loading)`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1080;
+
+  i {
+    background-color: ${({ theme }) => theme.inputColors.placeholder};
+  }
 `;

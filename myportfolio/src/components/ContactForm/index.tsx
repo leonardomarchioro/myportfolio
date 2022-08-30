@@ -1,12 +1,13 @@
-import { Spacer } from "@nextui-org/react";
+import { Spacer, Button } from "@nextui-org/react";
 
-import { SButton, SContainer, SForm, STitle } from "./styles";
+import { SContainer, SForm, SLoading, STitle } from "./styles";
 
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { GeneralInput, TextArea } from "../Inputs";
 import { sendEmail } from "../../utils/sendEmail";
+import { useState } from "react";
 
 interface IContact {
   name?: string;
@@ -32,39 +33,43 @@ const ContactForm: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
+  const [load, setLoad] = useState(false);
+
   const handleEmail = async (data: IContact) => {
-    console.log(data);
-    await sendEmail(data);
+    setLoad(true);
+    await sendEmail(data).finally(() => setLoad(false));
   };
 
   return (
-    <SForm onSubmit={handleSubmit(handleEmail)}>
-      <STitle>Contato</STitle>
-      <GeneralInput
-        label="Nome"
-        register={register}
-        name={"name"}
-        error={errors.name?.message}
-      />
-      <GeneralInput
-        label="Email"
-        register={register}
-        name={"email"}
-        error={errors.email?.message}
-      />
-      <Spacer />
-      <TextArea
-        label="Mensagem"
-        register={register}
-        name={"message"}
-        error={errors.message?.message}
-      />
-      <SContainer>
-        <SButton color="success" type="submit">
-          Enviar
-        </SButton>
-      </SContainer>
-    </SForm>
+    <>
+      {load && <SLoading type="points" size="lg" />}
+      <SForm onSubmit={handleSubmit(handleEmail)}>
+        <STitle>Contato</STitle>
+        <GeneralInput
+          label="Nome"
+          register={register}
+          name={"name"}
+          error={errors.name?.message}
+        />
+        <GeneralInput
+          label="Email"
+          register={register}
+          name={"email"}
+          error={errors.email?.message}
+        />
+        <Spacer />
+        <TextArea
+          label="Mensagem"
+          register={register}
+          name={"message"}
+          error={errors.message?.message}
+        />
+
+        <SContainer>
+          <Button type="submit">Enviar</Button>
+        </SContainer>
+      </SForm>
+    </>
   );
 };
 

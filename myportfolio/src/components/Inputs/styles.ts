@@ -14,7 +14,9 @@ export const SInput = styled(Input)<{ error: boolean }>`
   border: 1px solid;
   border-color: ${({ error }) =>
     error ? "#ff0c0c" : ({ theme }) => theme.inputColors.backgroud};
-  color: ${({ theme }) => theme.inputColors.placeholder};
+  input {
+    color: ${({ theme }) => theme.inputColors.placeholder};
+  }
 
   div {
     background-color: ${({ theme }) => theme.inputColors.backgroud};
@@ -38,7 +40,10 @@ export const STextarea = styled(Textarea)<{ error: boolean }>`
   border: 1px solid;
   border-color: ${({ error }) =>
     error ? "#ff0c0c" : ({ theme }) => theme.inputColors.backgroud};
-  color: ${({ theme }) => theme.inputColors.placeholder};
+
+  textarea {
+    color: ${({ theme }) => theme.inputColors.placeholder};
+  }
 
   div {
     background-color: ${({ theme }) => theme.inputColors.backgroud};
