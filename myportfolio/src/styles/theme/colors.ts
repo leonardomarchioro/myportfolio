@@ -16,7 +16,7 @@ export const lightTheme: DefaultTheme = {
   },
   textColors: {
     primary: "#000000",
-    secondary: "#000000",
+    secondary: "#FFFFFF",
   },
   inputColors: {
     backgroud: "#F1F3F5",
@@ -54,7 +54,7 @@ export const darkTheme: DefaultTheme = {
   },
   textColors: {
     primary: "#FFFFFF",
-    secondary: "#000000",
+    secondary: "#FFFFFF",
   },
   inputColors: {
     backgroud: "#1F1F1F",

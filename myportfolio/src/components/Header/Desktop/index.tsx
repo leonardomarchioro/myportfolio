@@ -25,10 +25,10 @@ const DesktopHeader: React.FC = () => {
     <NavBarRoot className="Desktop" isBordered variant="sticky">
       <NavContent>
         <Navigate>
-          <Button onClick={() => scrollTo(10)}>Tecnologias</Button>
+          <Button onClick={() => scrollTo(380)}>Tecnologias</Button>
         </Navigate>
         <Navigate>
-          <Button onClick={() => scrollTo(550)}>Projetos</Button>
+          <Button onClick={() => scrollTo(680)}>Projetos</Button>
         </Navigate>
         <Navigate>
           <Button onClick={() => scrollTo(10000)}>Contato</Button>
