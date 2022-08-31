@@ -4,7 +4,7 @@ import { HeaderContainer } from "./styles";
 
 const Header: React.FC = () => {
   return (
-    <HeaderContainer>
+    <HeaderContainer id="TopSection">
       <DesktopHeader />
       <MobileHeader />
     </HeaderContainer>

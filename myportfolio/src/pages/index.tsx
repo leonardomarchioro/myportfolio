@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Techs from "../components/Techs";
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <Projects />
         <ContactForm />
       </main>
+      <Footer />
     </>
   );
 };
