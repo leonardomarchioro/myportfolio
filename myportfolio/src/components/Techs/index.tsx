@@ -20,6 +20,7 @@ import {
   SiInsomnia,
   SiRedux,
 } from "react-icons/si";
+import { useTheme } from "../../styles/theme/themeProvider";
 import { Container, ContainerTechs, SCard, Title } from "./styles";
 
 const techsData = [
@@ -99,14 +100,20 @@ const techsData = [
 ];
 
 const Techs: React.FC = () => {
+  const { mode } = useTheme();
+
   return (
     <ContainerTechs>
       <Title>Habilidades</Title>
       <Container>
         {techsData.map((item, i) => (
-          <Tooltip key={i} content={item.tooltip}>
+          <Tooltip
+            key={i}
+            content={item.tooltip}
+            color={mode === "light" ? "default" : "invert"}
+          >
             <SCard>
-              <item.icon color="#495057" />
+              <item.icon />
             </SCard>
           </Tooltip>
         ))}

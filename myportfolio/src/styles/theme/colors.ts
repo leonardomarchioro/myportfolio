@@ -15,7 +15,7 @@ export const lightTheme: DefaultTheme = {
     secondary: "#2D2E4D",
   },
   textColors: {
-    primary: "#FFFFFF",
+    primary: "#000000",
     secondary: "#000000",
   },
   inputColors: {

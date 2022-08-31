@@ -35,8 +35,8 @@ export const ContainerLinks = styled(Navbar.Item)`
 
 export const Navigate = styled(Navbar.Item)`
   > button {
-    background-color: ${({ theme }) => theme.backgroundColors.primary};
-    color: ${({ theme }) => theme.textColors.primary};
+    background-color: ${({ theme }) => theme.spanBox.background};
+    color: ${({ theme }) => theme.spanBox.color};
     height: 2rem;
   }
 

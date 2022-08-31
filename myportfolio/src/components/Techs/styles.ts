@@ -18,9 +18,13 @@ export const SCard = styled(Card)`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.backgroundColors.general};
+
   svg {
     width: 80%;
     height: 80%;
+    color: ${({ theme }) => theme.titleColors.primary};
   }
 `;
 
