@@ -5,58 +5,61 @@ import GitHub from "../../../assets/github.png";
 import Image from "next/image";
 
 import { Navbar, Switch } from "@nextui-org/react";
-import {
-  CollapseContent,
-  ContainerLinks,
-  NavBarRoot,
-  Navigate,
-} from "./styles";
+import { CollapseContent, Figure, NavBarRoot, Navigate, SLink } from "./styles";
 import { useTheme } from "../../../styles/theme/themeProvider";
 
 import { HiSun, HiMoon } from "react-icons/hi";
-import Link from "next/link";
 
 const MobileHeader: React.FC = () => {
   const { handleTheme } = useTheme();
 
-  const scrollTo = (position: number) => {
-    window.scrollTo({
-      top: position,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <NavBarRoot className="Mobile" isBordered variant="sticky">
+    <NavBarRoot
+      className="Mobile"
+      isBordered
+      variant="sticky"
+      disableShadow
+      aria-disabled
+    >
       <Navbar.Toggle />
       <Switch onChange={handleTheme} iconOn={<HiMoon />} iconOff={<HiSun />} />
       <CollapseContent>
-        <Navigate onClick={() => scrollTo(10)}>Tecnologias</Navigate>
-        <Navigate onClick={() => scrollTo(550)}>Projetos</Navigate>
-        <Navigate onClick={() => scrollTo(10000)}>Contato</Navigate>
-        <ContainerLinks>
-          <div>
-            <Link
-              href="https://api.whatsapp.com/send/?phone=5547996797620&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <Image src={WhatsApp} alt="WhatsApp" />
-            </Link>
-          </div>
-          <div>
-            <Link
-              href="https://www.linkedin.com/in/leonardo-marchioro/"
-              target="_blank"
-            >
-              <Image src={Linkedin} alt="Linkedin" />
-            </Link>
-          </div>
-          <div>
-            <Link href="https://github.com/leonardomarchioro" target="_blank">
-              <Image src={GitHub} alt="GitHub" />
-            </Link>
-          </div>
-        </ContainerLinks>
+        <Navigate>
+          <SLink
+            href="https://api.whatsapp.com/send/?phone=5547996797620&text&type=phone_number&app_absent=0"
+            target="_blank"
+          >
+            <>
+              <Figure>
+                <Image src={WhatsApp} alt="WhatsApp" />
+              </Figure>
+              WhatsApp
+            </>
+          </SLink>
+        </Navigate>
+        <Navigate>
+          <SLink
+            href="https://www.linkedin.com/in/leonardo-marchioro/"
+            target="_blank"
+          >
+            <>
+              <Figure>
+                <Image src={Linkedin} alt="Linkedin" />
+              </Figure>
+              LinkedIn
+            </>
+          </SLink>
+        </Navigate>
+        <Navigate>
+          <SLink href="https://github.com/leonardomarchioro" target="_blank">
+            <>
+              <Figure>
+                <Image src={GitHub} alt="GitHub" />
+              </Figure>
+              GitHub
+            </>
+          </SLink>
+        </Navigate>
       </CollapseContent>
     </NavBarRoot>
   );
