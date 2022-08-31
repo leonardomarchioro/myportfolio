@@ -32,6 +32,12 @@ export const SContainer = styled.div`
     width: 5rem;
     font-weight: 600;
   }
+
+  @media screen and (max-width: 768px) {
+    button {
+      width: 100%;
+    }
+  }
 `;
 
 export const SLoading = styled(Loading)`
