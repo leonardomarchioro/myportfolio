@@ -5,7 +5,7 @@ import { Container, GroupContainer, Title } from "./styles";
 
 const Projects: React.FC = () => {
   return (
-    <Container>
+    <Container id="ProjectsSection">
       <Title>Projetos</Title>
       <GroupContainer>
         {projects.map((prod, i) => (

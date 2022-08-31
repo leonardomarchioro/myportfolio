@@ -103,7 +103,7 @@ const Techs: React.FC = () => {
   const { mode } = useTheme();
 
   return (
-    <ContainerTechs>
+    <ContainerTechs id="TechsSection">
       <Title>Habilidades</Title>
       <Container>
         {techsData.map((item, i) => (

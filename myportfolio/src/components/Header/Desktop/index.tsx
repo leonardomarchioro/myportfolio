@@ -11,27 +11,52 @@ import { useTheme } from "../../../styles/theme/themeProvider";
 import { HiSun, HiMoon } from "react-icons/hi";
 import Link from "next/link";
 
+import { Link as ToScrool } from "react-scroll";
+
 const DesktopHeader: React.FC = () => {
   const { handleTheme } = useTheme();
-
-  const scrollTo = (position: number) => {
-    window.scrollTo({
-      top: position,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <NavBarRoot className="Desktop" isBordered variant="sticky">
       <NavContent>
         <Navigate>
-          <Button onClick={() => scrollTo(380)}>Tecnologias</Button>
+          <Button>
+            <ToScrool
+              to="TechsSection"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Tecnologias
+            </ToScrool>
+          </Button>
         </Navigate>
         <Navigate>
-          <Button onClick={() => scrollTo(680)}>Projetos</Button>
+          <Button>
+            <ToScrool
+              to="ProjectsSection"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Projetos
+            </ToScrool>
+          </Button>
         </Navigate>
         <Navigate>
-          <Button onClick={() => scrollTo(10000)}>Contato</Button>
+          <Button>
+            <ToScrool
+              to="ContactSection"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Contato
+            </ToScrool>
+          </Button>
         </Navigate>
         <ContainerLinks>
           <>

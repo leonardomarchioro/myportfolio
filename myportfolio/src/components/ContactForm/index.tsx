@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
   return (
     <>
       {load && <SLoading type="points" size="lg" />}
-      <SForm onSubmit={handleSubmit(handleEmail)}>
+      <SForm id="ContactSection" onSubmit={handleSubmit(handleEmail)}>
         <STitle>Contato</STitle>
         <GeneralInput
           label="Nome"

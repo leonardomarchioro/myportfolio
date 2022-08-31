@@ -38,6 +38,17 @@ export const Navigate = styled(Navbar.Item)`
     background-color: ${({ theme }) => theme.spanBox.background};
     color: ${({ theme }) => theme.spanBox.color};
     height: 2rem;
+
+    > span {
+      text-decoration: none;
+      width: 100%;
+
+      > a {
+        text-decoration: none;
+        color: ${({ theme }) => theme.spanBox.color};
+        width: 100%;
+      }
+    }
   }
 
   &:hover {
