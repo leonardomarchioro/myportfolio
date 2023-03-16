@@ -22,7 +22,7 @@ const MobileHeader: React.FC = () => {
       aria-disabled
     >
       <Navbar.Toggle />
-      <Switch onChange={handleTheme} iconOn={<HiMoon />} iconOff={<HiSun />} />
+      <Switch onChange={handleTheme} iconOn={<HiSun />} iconOff={<HiMoon />} />
       <CollapseContent>
         <Navigate>
           <SLink

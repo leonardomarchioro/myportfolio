@@ -84,7 +84,7 @@ const DesktopHeader: React.FC = () => {
           </>
         </ContainerLinks>
       </NavContent>
-      <Switch onChange={handleTheme} iconOn={<HiMoon />} iconOff={<HiSun />} />
+      <Switch onChange={handleTheme} iconOn={<HiSun />} iconOff={<HiMoon />} />
     </NavBarRoot>
   );
 };

@@ -1,0 +1,5 @@
+export default [
+    `Olá, meu nome é Leonardo, tenho 21 anos e meu contato com a tecnologia começou logo na infância, quando comecei a jogar videogames e, posteriormente, a utilizar a internet. Minha primeira experiência significativa foi com a rede social Orkut, que marcou época. Apesar de sempre estar envolvido nesse mundo, nunca havia me aprofundado de fato. No entanto, isso mudou quando decidi fazer uma mudança de planos em minha vida. Em 2020, comecei a estudar por conta própria, mas ainda sem uma direção específica e sem uma evolução constante.`,
+    `Em setembro de 2021, entrei para a Kenzie, uma escola de tecnologia, e isso mudou completamente. Finalmente, consegui encontrar uma direção e seguir em frente. Estou feliz por ver meu progresso dia após dia. Hoje estou confiante na escolha que fiz e grato por ter dado esse passo em direção ao meu futuro.`,
+    `Sei que ainda tenho muito a aprender, mas estou determinado a seguir em frente e alcançar meus objetivos na área de tecnologia.`,
+];

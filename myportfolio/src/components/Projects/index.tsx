@@ -1,4 +1,3 @@
-import { Collapse } from "@nextui-org/react";
 import { projects } from "../../utils/projects";
 import Card from "../Card";
 import { Container, GroupContainer, Title } from "./styles";

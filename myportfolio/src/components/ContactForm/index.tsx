@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { GeneralInput, TextArea } from "../Inputs";
 import { sendEmail } from "../../utils/sendEmail";
 import { useState } from "react";
+import { useLoading } from "../../LoadingProvider";
 
 interface IContact {
   name?: string;
@@ -33,16 +34,14 @@ const ContactForm: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const [load, setLoad] = useState(false);
-
+  const { setLoading } = useLoading()
   const handleEmail = async (data: IContact) => {
-    setLoad(true);
-    await sendEmail(data).finally(() => setLoad(false));
+    setLoading(true);
+    await sendEmail(data).finally(() => setLoading(false));
   };
 
   return (
     <>
-      {load && <SLoading type="points" size="lg" />}
       <SForm id="ContactSection" onSubmit={handleSubmit(handleEmail)}>
         <STitle>Contato</STitle>
         <GeneralInput

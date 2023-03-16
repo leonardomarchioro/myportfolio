@@ -23,6 +23,8 @@ export const SubTitle = styled.h2`
 
 export const Text = styled.p`
   color: ${({ theme }) => theme.textColors.primary};
+  text-indent: 1rem;
+  padding: 0.1rem 0;
 `;
 
 export const List = styled.ul`
@@ -34,11 +36,11 @@ export const List = styled.ul`
   li {
     background-color: ${({ theme }) => theme.spanBox.background};
     color: ${({ theme }) => theme.spanBox.color};
-    padding: 0.4rem;
-    height: 2rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
     font-weight: 600;
     font-size: 0.8rem;
+    margin: 0rem;
   }
 `;
 
