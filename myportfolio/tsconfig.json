@@ -23,5 +23,5 @@
     "src/styles/theme/theme.d.ts"
   ],
   "exclude": ["node_modules"],
-  "files": ["src/styles/theme/theme.d.ts"]
+  "files": ["src/styles/theme/theme.d.ts"],
 }

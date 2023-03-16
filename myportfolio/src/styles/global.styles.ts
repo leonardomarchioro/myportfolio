@@ -17,11 +17,10 @@ export const GlobalStyle = createGlobalStyle`
         height: 100vh;
         
     }
-
     body {
         width: 100vw;
         height: 100vh;
-    
+        overflow: ${props => props.theme.loading ? 'hidden' : 'visible'}
     }
 
     button{

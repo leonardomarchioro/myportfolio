@@ -13,4 +13,5 @@ export const Title = styled.h1`
 
 export const Text = styled.p`
   color: ${({ theme }) => theme.textColors.secondary};
+  text-indent: 0.5rem;
 `;

@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Techs from "../components/Techs";
 
 const Home: NextPage = () => {
+
   return (
     <>
       <Head>
