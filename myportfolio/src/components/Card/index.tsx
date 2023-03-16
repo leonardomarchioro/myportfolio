@@ -31,7 +31,9 @@ const Card: React.FC<{ project: IProject }> = ({ project }) => {
       bordered
     >
       <TechsList techs={project.techs} />
-      <Text>{project.sobre}</Text>
+        {project.about.map(paragraph => (
+          <Text>{paragraph}</Text>
+        ))}
     </SCollapse>
   );
 };

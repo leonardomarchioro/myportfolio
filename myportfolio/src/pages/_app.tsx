@@ -6,26 +6,30 @@ import StyledThemeProvider from "../styles/theme/themeProvider";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { LoadingProvider } from "../LoadingProvider";
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <StyledThemeProvider>
-        <GlobalStyle />
-        <NextUIProvider>
-          <ToastContainer
-            position="top-center"
-            autoClose={3000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-          <Component {...pageProps} />
-        </NextUIProvider>
+        <LoadingProvider>
+          <GlobalStyle/>
+          <NextUIProvider>
+            <ToastContainer
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              />
+            <Component {...pageProps} />
+          </NextUIProvider>
+        </LoadingProvider>
       </StyledThemeProvider>
     </>
   );

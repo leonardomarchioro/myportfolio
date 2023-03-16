@@ -48,8 +48,12 @@ export const SLoading = styled(Loading)`
   right: 0;
   margin: auto;
   z-index: 1080;
+  opacity: 0.8;
+  background-color: #000;
+  cursor: wait;
 
   i {
-    background-color: ${({ theme }) => theme.inputColors.placeholder};
+    background-color: #FFF;
+
   }
 `;
