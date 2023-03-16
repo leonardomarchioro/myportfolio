@@ -1,7 +1,6 @@
 import "styled-components";
 
 type CustomTheme = {
-  loading: boolean;
   backgroundColors: {
     general: string;
     primary: string;
@@ -40,5 +39,7 @@ type CustomTheme = {
 }
 
 declare module "styled-components" {
-  export interface DefaultTheme extends CustomTheme {}
+  export interface DefaultTheme extends CustomTheme {
+    loading?: boolean;
+  }
 }

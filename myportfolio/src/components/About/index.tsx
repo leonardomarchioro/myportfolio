@@ -7,8 +7,8 @@ const About: React.FC = () => {
   return (
     <Container>
       <Title>Sobre mim</Title>
-      {aboutMe.map(paragraph => (
-        <Text>{paragraph}</Text>
+      {aboutMe.map((paragraph, i) => (
+        <Text key={i}>{paragraph}</Text>
       ))}
     </Container>
   );
